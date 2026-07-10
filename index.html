@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portofolio | Bayu Setiawan </title>
+  <meta name="description"
+    content="Portofolio pribadi Bayu Setiawan — Web Developer, AI Content Creator, Informatics Graduate.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============ LOADING SCREEN ============ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-ring"></span>
+      <span class="loader-text">BS</span>
+    </div>
+  </div>
+
+  <!-- ============ CUSTOM CURSOR ============ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============ PARTICLE BACKGROUND ============ -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Bayu<span>.</span></a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a>
+        <a href="#certificates" class="nav-link" data-section="certificates">Certificates</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#services" class="nav-link" data-section="services">Services</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="hero-container">
+      <div class="hero-text reveal-up">
+        <p class="hero-eyebrow"><span class="dot-pulse"></span> Available for freelance &amp; full-time roles</p>
+        <h1 class="hero-title">Halo, saya <span class="gdient-text">Bayu Setiawan</span></h1>
+        <h2 class="hero-role">
+          <span id="typedRole"></span><span class="cursor-blink">|</span>
+        </h2>
+        <p class="hero-desc">
+          Lulusan Informatika yang membangun sistem web yang menarik dan fungsional,
+          serta bereksperimen dengan AI untuk menciptakan konten visual yang menarik.
+          Saya percaya kode yang bersih dan desain yang matang adalah satu kesatuan.
+        </p>
+        <div class="hero-btns">
+          <a href="Sertifikat/CV_Bayu_Setiawan.pdf" download class="btn btn-primary" id="downloadCV">
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fa-regular fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero-visual reveal-up delay-2">
+        <div class="hero-ring">
+          <div class="hero-photo">
+            <img src="Gambar/Foto_Porto.png" alt="Bayu Setiawan">
+          </div>
+          <span class="orbit-badge badge-1"><i class="fa-brands fa-html5"></i></span>
+          <span class="orbit-badge badge-2"><i class="fa-brands fa-js"></i></span>
+          <span class="orbit-badge badge-3"><i class="fa-brands fa-php"></i></span>
+          <span class="orbit-badge badge-4"><i class="fa-solid fa-file-excel"></i></span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll ke bawah">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-eyebrow">Tentang Saya</p>
+      <h2 class="section-title">Mengenal Lebih Dekat</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal-up">
+          <p>
+            Saya adalah lulusan Informatika dengan minat pada pengembangan web dan
+            teknologi kecerdasan buatan. Selama masa studi dan magang, saya terbiasa membangun
+            sistem informasi berbasis PHP &amp; MySQL secara menyeluruh — mulai dari perancangan
+            basis data, logika bisnis, hingga antarmuka yang nyaman digunakan.
+          </p>
+          <p>
+            Selain pengembangan web, saya juga aktif mengeksplorasi AI Prompt Engineering dan Google Flow
+            untuk memproduksi konten visual seperti video animasi edukasi. Saya memiliki ketertarikan besar
+            di bidang pengolahan data dan administrasi, khususnya dalam menggunakan Microsoft Excel untuk
+            mengolah data dan membuat laporan.
+          </p>
+          <a href="#contact" class="btn btn-primary">Mari Berkolaborasi <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="about-stats reveal-up delay-2">
+          <div class="stat-card">
+            <i class="fa-solid fa-diagram-project"></i>
+            <span class="stat-number" data-target="5">0</span>
+            <p>Project Selesai</p>
+          </div>
+          <div class="stat-card">
+            <i class="fa-solid fa-certificate"></i>
+            <span class="stat-number" data-target="4">0</span>
+            <p>Sertifikat</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <p class="section-eyebrow">Kemampuan</p>
+      <h2 class="section-title">Skills &amp; Tools</h2>
+
+      <div class="skills-grid">
+        <div class="skills-bars reveal-up">
+          <div class="skill-bar" data-percent="90">
+            <div class="skill-head"><span>HTML</span><span class="skill-percent">0%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-bar" data-percent="85">
+            <div class="skill-head"><span>CSS</span><span class="skill-percent">0%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-bar" data-percent="75">
+            <div class="skill-head"><span>JavaScript</span><span class="skill-percent">0%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-bar" data-percent="85">
+            <div class="skill-head"><span>PHP</span><span class="skill-percent">0%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-bar" data-percent="80">
+            <div class="skill-head"><span>MySQL</span><span class="skill-percent">0%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+          <div class="skill-bar" data-percent="75">
+            <div class="skill-head"><span>Laravel</span><span class="skill-percent">0%</span></div>
+            <div class="skill-track">
+              <div class="skill-fill"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-circles reveal-up delay-2">
+          <div class="circle-skill" data-percent="70">
+            <svg viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+              <circle class="ring-fill" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div class="circle-label"><span class="circle-percent">0%</span>Python</div>
+          </div>
+          <div class="circle-skill" data-percent="90">
+            <svg viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+              <circle class="ring-fill" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div class="circle-label"><span class="circle-percent">0%</span>AI Prompting</div>
+          </div>
+          <div class="circle-skill" data-percent="85">
+            <svg viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+              <circle class="ring-fill" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div class="circle-label"><span class="circle-percent">0%</span>Google Flow</div>
+          </div>
+          <div class="circle-skill" data-percent="90">
+            <svg viewBox="0 0 120 120">
+              <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+              <circle class="ring-fill" cx="60" cy="60" r="52"></circle>
+            </svg>
+            <div class="circle-label"><span class="circle-percent">0%</span>Excel</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PORTFOLIO ============ -->
+  <section class="section" id="portfolio">
+    <div class="container">
+      <p class="section-eyebrow">Karya</p>
+      <h2 class="section-title">Portfolio &amp; Projects</h2>
+
+      <div class="project-grid">
+
+        <article class="project-card reveal-up" data-tilt>
+          <div class="project-thumb thumb-1">
+            <img src="Gambar/Web_Perpus.png" alt="Website Perpustakaan">
+          </div>
+          <div class="project-body">
+            <h3>Website Sistem Perpustakaan</h3>
+            <p class="project-tags">
+              <span>PHP Native</span><span>MySQL</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </p>
+            <p class="project-desc">
+              Sistem perpustakaan lengkap dengan login admin, manajemen data buku &amp; anggota,
+              transaksi peminjaman/pengembalian, laporan PDF, dashboard, serta perhitungan denda
+              keterlambatan otomatis.
+            </p>
+            <div class="project-links">
+              <a href="http://webperpustakaan.rf.gd/anggota/dashboard.php" class="link-btn"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/BayuSetiawan4724/Sistem_Perpustakaan" class="link-btn"><i
+                  class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up delay-1" data-tilt>
+          <div class="project-thumb thumb-2">
+            <img src="Gambar/Kuesioner.png" alt="Website Sistem Kuesioner">
+          </div>
+          <div class="project-body">
+            <h3>Website Sistem Kuesioner</h3>
+            <p class="project-tags">
+              <span>PHP Native</span><span>CSS</span><span>MySQL</span>
+            </p>
+            <p class="project-desc">
+              Sistem kuesioner berbasis web yang memungkinkan pembuatan, pengisian, dan analisis
+              kuesioner secara online. Fitur meliputi dashboard analisis, manajemen pertanyaan, pengumpulan data,
+              Uji Statistik & Validasi, Modul Clustering Komparatif, dan ekspor data ke Excel.
+            </p>
+            <div class="project-links">
+              <a href="https://sistem-kuesioner.kesug.com/?i=1" class="link-btn"><i
+                  class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              <a href="https://github.com/BayuSetiawan4724/Sistem_Kuesioner" class="link-btn"><i
+                  class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal-up delay-2" data-tilt>
+          <div class="project-thumb thumb-3">
+            <img src="Gambar/Animasi.png" alt="Video Animasi Edukasi Anak">
+          </div>
+          <div class="project-body">
+            <h3>Video Animasi Edukasi Anak</h3>
+            <p class="project-tags">
+              <span>Artificial Intelligence</span><span>Google Flow</span>
+            </p>
+            <p class="project-desc">
+              Produksi video animasi edukasi anak berbasis AI &amp; Google Flow — mencakup karakter
+              animasi, dubbing otomatis, sinkronisasi suara, storyboard, dan visual berkualitas tinggi.
+            </p>
+            <div class="project-links">
+              <a href="https://drive.google.com/file/d/1EaZyFMuPT9agKKpZijrN4oOa43fM2Thf/view?usp=sharing"
+                class="link-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATES ============ -->
+  <section class="section section-alt" id="certificates">
+    <div class="container">
+      <p class="section-eyebrow">Pencapaian</p>
+      <h2 class="section-title">Certificates</h2>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal-up" data-cert-title="Magang Perusahaan"
+          data-cert-desc="Bukti penyelesaian program magang di bidang pengembangan perangkat lunak, dengan fokus pada praktik kerja nyata dan kolaborasi tim."
+          data-cert-img="Gambar/Magang.jpg" data-cert-pdf="Sertifikat/Magang.pdf">
+          <div class="cert-thumb">
+            <img src="Gambar/Magang.jpg" alt="Magang Perusahaan" loading="lazy">
+          </div>
+          <p>Magang Perusahaan</p>
+        </div>
+
+        <div class="cert-card reveal-up delay-1" data-cert-title="Kompetensi Multimedia"
+          data-cert-desc="Berhasil memperoleh Sertifikat Kompetensi Keahlian Multimedia dari Politeknik Negeri Media Kreatif dengan predikat Kompeten, sebagai bukti penguasaan dalam desain grafis digital, produksi media visual, dan pemanfaatan perangkat lunak multimedia."
+          data-cert-img="Gambar/Kompetensi_Multimedia.jpg" data-cert-pdf="Sertifikat/Kompetensi_Multimedia.pdf">
+          <div class="cert-thumb">
+            <img src="Gambar/Kompetensi_Multimedia.jpg" alt="Kompetensi Multimedia" loading="lazy">
+          </div>
+          <p>Kompetensi Multimedia</p>
+        </div>
+
+        <div class="cert-card reveal-up delay-2" data-cert-title="Seminar Nasional"
+          data-cert-desc="Sertifikat keikutsertaan dalam seminar IT Nasional dengan tema &quot;Future Proof Your Career As Web Developer In The Age Of AI&quot;."
+          data-cert-img="Gambar/Bayu Setiawan_Sertifikat Seminar Nasional.jpg"
+          data-cert-pdf="Sertifikat/Bayu-Setiawan-Sertifikat-Seminar-Nasional.pdf">
+          <div class="cert-thumb">
+            <img src="Gambar/Bayu Setiawan_Sertifikat Seminar Nasional.jpg" alt="Seminar Nasional" loading="lazy">
+          </div>
+          <p>Seminar Nasional</p>
+        </div>
+
+        <div class="cert-card reveal-up delay-3" data-cert-title="Seminar IT"
+          data-cert-desc="Sertifikat keikutsertaan dalam seminar IT Kampus dengan tema &quot;Teknik Informatika dan Transformasi Digital untuk Membangun Industri Masa Depan&quot;."
+          data-cert-img="Gambar/Bayu Setiawan Serifikat Webinar series Prodi TI Undipa.jpg"
+          data-cert-pdf="Sertifikat/Bayu-Setiawan-Sertifikat-Webinar-Prodi-TI-Undipa.pdf">
+          <div class="cert-thumb">
+            <img src="Gambar/Bayu Setiawan Serifikat Webinar series Prodi TI Undipa.jpg" alt="Seminar IT"
+              loading="lazy">
+          </div>
+          <p>Seminar IT</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate Modal -->
+  <div class="cert-modal" id="certModal">
+    <div class="cert-modal-backdrop" id="certModalBackdrop"></div>
+    <div class="cert-modal-content">
+      <button class="cert-modal-close" id="certModalClose" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+      <div class="cert-modal-thumb" id="certModalThumb"><i class="fa-solid fa-award"></i></div>
+      <h3 id="certModalTitle">Judul Sertifikat</h3>
+      <p id="certModalDesc">Deskripsi sertifikat.</p>
+      <a href="#" class="btn btn-primary cert-download-btn" id="certModalDownload" download>
+        <i class="fa-solid fa-download"></i> Download Sertifikat
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ TIMELINE / EXPERIENCE ============ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <p class="section-eyebrow">Perjalanan</p>
+      <h2 class="section-title">Timeline &amp; Experience</h2>
+
+      <div class="timeline">
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2025</span>
+            <h3>Magang di Perusahaan</h3>
+            <p>Memulai perjalanan profesional melalui program magang di bidang pengembangan sistem berbasis web.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2025</span>
+            <h3>Mengembangkan Website Perpustakaan</h3>
+            <p>Merancang dan membangun sistem perpustakaan digital lengkap dengan modul peminjaman dan laporan.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2025</span>
+            <h3>Mengembangkan Website Penjualan Buku</h3>
+            <p>Membangun platform e-commerce buku dari perancangan basis data hingga dashboard admin.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2026</span>
+            <h3>Membuat Video Animasi AI</h3>
+            <p>Bereksperimen dengan AI dan Google Flow untuk memproduksi konten animasi edukasi anak.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2026 - Sekarang</span>
+            <h3>Mengikuti Berbagai Pelatihan Teknologi</h3>
+            <p>Terus memperdalam keterampilan melalui pelatihan, workshop, dan seminar di bidang teknologi.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <p class="section-eyebrow">Layanan</p>
+      <h2 class="section-title">Services</h2>
+
+      <div class="service-grid">
+        <div class="service-card reveal-up">
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Website Development</h3>
+          <p>Pembuatan website dan sistem informasi dari perancangan hingga deployment.</p>
+        </div>
+        <div class="service-card reveal-up delay-1">
+          <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>Merancang antarmuka yang bersih, intuitif, dan enak digunakan.</p>
+        </div>
+        <div class="service-card reveal-up delay-2">
+          <div class="service-icon"><i class="fa-solid fa-clapperboard"></i></div>
+          <h3>AI Video Creation</h3>
+          <p>Produksi video animasi berbasis AI, dari storyboard hingga visual akhir.</p>
+        </div>
+        <div class="service-card reveal-up delay-3">
+          <div class="service-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>Database Design</h3>
+          <p>Perancangan basis data yang efisien, ternormalisasi, dan siap diskalakan.</p>
+        </div>
+        <div class="service-card reveal-up delay-4">
+          <div class="service-icon"><i class="fa-solid fa-table-cells"></i></div>
+          <h3>Excel Automation</h3>
+          <p>Otomatisasi laporan dan pengolahan data menggunakan rumus &amp; makro Excel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <p class="section-eyebrow">Hubungi Saya</p>
+      <h2 class="section-title">Get In Touch</h2>
+
+      <div class="contact-grid">
+        <form class="contact-form reveal-up" id="contactForm" novalidate action="https://formspree.io/f/xkoldzly"
+          method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nama</label>
+              <input type="text" id="name" name="name" placeholder="Nama lengkap Anda">
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="nama@email.com">
+              <span class="form-error" id="emailError"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Topik pesan Anda">
+            <span class="form-error" id="subjectError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..."></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+            <i class="fa-solid fa-paper-plane"></i> <span id="submitBtnText">Kirim Pesan</span>
+          </button>
+          <p class="form-success" id="formSuccess">Pesan berhasil terkirim. Terima kasih!</p>
+          <p class="form-error-msg" id="formErrorMsg">Gagal mengirim pesan. Coba lagi atau hubungi lewat WhatsApp.</p>
+        </form>
+
+        <div class="contact-info reveal-up delay-2">
+          <a href="mailto:bayuwan07@gmail.com" class="info-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div><span>Email</span><strong>bayuwan07@gmail.com</strong></div>
+          </a>
+          <a href="https://wa.me/6285696054707" class="info-card">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div><span>WhatsApp</span><strong>+62 856-9605-4707</strong></div>
+          </a>
+          <a href="https://github.com/BayuSetiawan4724" class="info-card">
+            <i class="fa-brands fa-github"></i>
+            <div><span>GitHub</span><strong>github.com/BayuSetiawan4724</strong></div>
+          </a>
+          <a href="https://www.linkedin.com/in/bayusetiawan7" class="info-card">
+            <i class="fa-brands fa-linkedin"></i>
+            <div><span>LinkedIn</span><strong>linkedin.com/in/bayusetiawan7</strong></div>
+          </a>
+          <div class="info-card info-card-static">
+            <i class="fa-solid fa-location-dot"></i>
+            <div><span>Lokasi</span><strong>Indonesia</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="nav-logo">Bayu<span>.</span></a>
+      <p>&copy; <span id="year"></span> Bayu Setiawan. Seluruh hak cipta dilindungi.</p>
+      <div class="footer-social">
+        <a href="https://github.com/BayuSetiawan4724" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/bayusetiawan7" aria-label="LinkedIn"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/bayusetiawan7_/" aria-label="Instagram"><i
+            class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/6285696054707" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
